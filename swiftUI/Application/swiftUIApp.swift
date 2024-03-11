@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-struct swiftUIApp: App {
+struct SwiftUIApp: App {
+    @UIApplicationDelegateAdaptor var delegate: AppDelegate
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                LoginView()
+            }
         }
     }
 }
